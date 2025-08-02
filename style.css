@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --FONT-FAMILY: Figtree, sans-serif;
+  --DARK-COLOR: hsl(0, 0%, 7%);
+  --BG-COLOR: hsl(47, 88%, 63%);
+  --TEXT-COLOR: hsl(0, 0%, 42%);
+}
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--BG-COLOR);
+  font-family: var(--FONT-FAMILY);
+  display:grid;
+  place-content: center;
+}
+.offscreen {
+  position: absolute;
+  left: -100000px;
+}
+.card-container {
+
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-items: center;
+  border: 2px solid var(--DARK-COLOR);
+  border-radius: 10%;
+  max-width: 500px;
+  width:100%;
+  min-height: 700px;
+  height:100%;
+  box-shadow: 13px 13px var(--DARK-COLOR);
+  background-color: white;
+}
+
+.card-container__figure-hero {
+  width: 85%;
+  margin-top: 10px;
+  border-radius: inherit;
+}
+
+.card-container__hero {
+  width: 100%;
+  height: auto;
+  border-radius: inherit;
+}
+
+.card-container__status {
+  align-self: flex-start;
+  background-color: var(--BG-COLOR);
+  padding: 10px 15px 10px 15px;
+  margin-left: 7.5%;
+  font-size: 20px;
+  font-weight: 800;
+  border-radius: 10%;
+}
+
+.card-container__date {
+  align-self: flex-start;
+  margin-left: 7.5%;
+  font-size: 20px;
+  transform: translateY(-15px);
+}
+
+.card-container__header {
+  align-self: flex-start;
+  margin-left: 7.5%;
+  transform: translateY(-15px);
+  font-size: 2rem;
+}
+
+.card-container__text {
+  align-self: flex-start;
+  margin-left: 7.5%;
+  transform: translateY(-15px);
+  color: var(--TEXT-COLOR);
+  font-size: 1.3rem;
+}
+
+.card-container__figure-user {
+  align-self: flex-start;
+  margin-left: 7.5%;
+  width: 40%;
+  display:flex;
+  flex-flow:row nowrap;
+  
+}
+
+.card-container__user-img{
+    width: 100%;
+}
+.card-container__username{
+    white-space: nowrap;
+    display:grid;
+    place-content: center;
+    margin-left:10px;
+    font-weight: 800;
+    font-size:20px;
+}
+
+@media screen and (min-width:412px) and (max-width:502px) {
+    .card-container{
+        width: 80%;
+        margin:0 auto 0;
+    }
+    .card-container__figure-user{
+        width:50%;
+    }
+}
